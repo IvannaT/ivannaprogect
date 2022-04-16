@@ -8,13 +8,7 @@ public class Address {
     }
 
     public String toString() {
-        return "Address{" +
-                "street='" + street + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", country='" + country + '\'' +
-                '}';
+        return street +", "+ city + ", "+ state +", "+ zipCode;
     }
 
     public void setStreet(String street) {
