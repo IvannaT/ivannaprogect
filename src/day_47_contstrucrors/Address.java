@@ -16,8 +16,14 @@ public class Address {
         zipCode = "OOO0";
 
     }
-
-
+    //second constructor,overload cons,-provides shortcut to initialise variables
+    //in same statement ex;Address address = new address (7387 shychevicha<rivne rv)
+    public Address(String street ,String city,String state, String zipCode){
+        setStreet(street);
+        setCity(city);
+        setState(state);
+        setZipCode(zipCode);
+    }
     public String getStreet() {
         return street;
     }
@@ -26,18 +32,19 @@ public class Address {
         return street +", "+ city + ", "+ state +" "+ zipCode;
     }
 
-    public void setStreet(String street) {
-        this.street = street;
+    public void setStreet(String street){
+        if(street.isEmpty() || street.length() > 50){
+            System.out.println("Error : invalid street");
+        }else{
+            this.street = street;
+        }
     }
-
     public String getCity() {
         return city;
     }
-
     public void setCity(String city) {
         this.city = city;
     }
-
     public String getState() {
         return state;
     }
